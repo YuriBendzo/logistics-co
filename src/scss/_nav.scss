@@ -1,0 +1,99 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: $color-white;
+  box-shadow: $box-shadow;
+  z-index: 1000;
+  
+  .nav {
+    @include container;
+    @include flex-between;
+    padding: 1rem 20px;
+    height: 80px;
+
+    &__logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $color-navy;
+      
+      span {
+        color: $color-orange;
+      }
+    }
+
+    &__list {
+      @include flex-center;
+      gap: 2rem;
+      
+      @include respond-to('mobile') {
+        display: none; // Will handle JS trigger later
+      }
+    }
+
+    &__item {
+      position: relative;
+    }
+
+    &__link {
+      color: $color-navy;
+      font-weight: 500;
+      transition: color $transition-speed;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      
+      &:hover {
+        color: $color-orange;
+      }
+    }
+
+    // Dropdown styles
+    &__dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: $color-white;
+      min-width: 200px;
+      box-shadow: $box-shadow;
+      border-radius: 4px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all $transition-speed $transition-ease;
+      padding: 0.5rem 0;
+      z-index: 100;
+      
+      .nav__item:hover & {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      
+      &-link {
+        display: block;
+        padding: 0.75rem 1.5rem;
+        color: $color-gray-800;
+        transition: background-color $transition-speed;
+        
+        &:hover {
+          background-color: $color-gray-100;
+          color: $color-orange;
+        }
+      }
+    }
+
+    &__mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: $color-navy;
+      
+      @include respond-to('mobile') {
+        display: block;
+      }
+    }
+  }
+}

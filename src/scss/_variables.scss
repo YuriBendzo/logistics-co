@@ -1,0 +1,26 @@
+$color-navy: #0b192c;
+$color-navy-light: #1a365d;
+$color-white: #ffffff;
+$color-orange: #ff6b35;
+$color-orange-hover: #e85a2a;
+$color-gray-100: #f7fafc;
+$color-gray-300: #e2e8f0;
+$color-gray-800: #2d3748;
+
+$font-primary:
+  "Inter",
+  system-ui,
+  -apple-system,
+  sans-serif;
+
+$transition-speed: 0.3s;
+$transition-ease: ease-in-out;
+$box-shadow:
+  0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+// Breakpoints
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-large: 1280px;

@@ -1,0 +1,99 @@
+.hero {
+  position: relative;
+  background-color: $color-navy;
+  color: $color-white;
+  padding: 8rem 0 6rem;
+  overflow: hidden;
+  
+  &__container {
+    @include flex-column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  &__title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    max-width: 800px;
+    
+    span {
+      color: $color-orange;
+    }
+    
+    @include respond-to('mobile') {
+      font-size: 2.5rem;
+    }
+  }
+  
+  &__subtitle {
+    font-size: 1.25rem;
+    color: $color-gray-300;
+    margin-bottom: 3rem;
+    max-width: 600px;
+  }
+
+  // Tracking Widget
+  &__tracking {
+    background-color: $color-white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    width: 100%;
+    max-width: 600px;
+    
+    &-form {
+      display: flex;
+      gap: 1rem;
+      
+      @include respond-to('mobile') {
+        flex-direction: column;
+      }
+    }
+    
+    &-input-group {
+      flex: 1;
+      position: relative;
+    }
+    
+    &-input {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      border: 2px solid $color-gray-300;
+      border-radius: 4px;
+      transition: border-color $transition-speed;
+      color: $color-gray-800;
+      
+      &:focus {
+        outline: none;
+        border-color: $color-navy;
+      }
+      
+      &.error {
+        border-color: red;
+      }
+      &.success {
+        border-color: green;
+      }
+    }
+    
+    &-btn {
+      width: 150px;
+      
+      @include respond-to('mobile') {
+        width: 100%;
+      }
+    }
+    
+    &-message {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      min-height: 1.25rem; // To reserve space
+      color: $color-gray-800;
+    }
+  }
+}
