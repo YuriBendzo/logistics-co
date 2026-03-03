@@ -3,7 +3,7 @@
 Modern, responsive website for a global logistics and freight forwarding company.  
 Built with performance and clean code in mind.
 
-[LogisticsCo Hero Preview](https://yuribendzo.github.io/logistics-co/)
+[LogisticsCo Preview](https://yuribendzo.github.io/logistics-co/)
 
 ## ✨ Features
 
